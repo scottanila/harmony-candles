@@ -1,0 +1,460 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Harmony Candles — Créations parfumées faites main</title>
+  <meta name="description" content="Harmony Candles, l'art de parfumer votre intérieur : fondants parfumés, brûle-parfums, bouquets, parfums d'intérieur et coffrets cadeaux faits main.">
+  <meta name="theme-color" content="#f6eee4">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" href="assets/img/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+</head>
+<body class="is-loading">
+
+  <!-- ============ PRELOADER ============ -->
+  <div class="loader" aria-hidden="true">
+    <div class="loader__center">
+      <div class="loader__logo"><img src="assets/img/logo-ink.png" alt=""></div>
+      <div class="loader__candle">
+        <span class="flame"><i class="flame__outer"></i><i class="flame__inner"></i><i class="flame__core"></i></span>
+      </div>
+    </div>
+    <div class="loader__meta">
+      <span class="label">Créations parfumées</span>
+      <span class="loader__count label">000</span>
+    </div>
+    <div class="loader__bar"><i></i></div>
+  </div>
+
+  <!-- ============ CURSOR / AMBIENCE ============ -->
+  <div class="cursor" aria-hidden="true">
+    <div class="cursor__ring"><span class="cursor__label"></span></div>
+    <div class="cursor__dot"></div>
+  </div>
+  <div class="glow" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav">
+    <a href="#top" class="nav__logo" aria-label="Harmony Candles — accueil">
+      <span class="nav__mono" aria-hidden="true"></span>
+      <span class="nav__name">Harmony <em>Candles</em></span>
+    </a>
+    <nav class="nav__links" aria-label="Navigation principale">
+      <a href="boutique.html" class="nav__link"><span class="roll"><span class="roll__in" data-text="Boutique">Boutique</span></span></a>
+      <a href="#atelier" class="nav__link" data-section="atelier"><span class="roll"><span class="roll__in" data-text="L'atelier">L'atelier</span></span></a>
+      <a href="#moments" class="nav__link" data-section="moments"><span class="roll"><span class="roll__in" data-text="Moments">Moments</span></span></a>
+      <a href="faq.html" class="nav__link"><span class="roll"><span class="roll__in" data-text="FAQ">FAQ</span></span></a>
+      <a href="contact.html" class="nav__link"><span class="roll"><span class="roll__in" data-text="Contact">Contact</span></span></a>
+    </nav>
+    <a class="btn-pill btn-pill--sm nav__cart" href="https://harmonycandles.fr/cart" data-magnetic>
+      <span class="roll"><span class="roll__in" data-text="Panier">Panier</span></span>
+    </a>
+    <button class="btn-ghost btn-ghost--sm nav__burger" type="button" aria-expanded="false" aria-controls="menu">
+      <span class="roll"><span class="roll__in" data-text="Menu">Menu</span></span>
+    </button>
+  </header>
+
+  <div class="menu" id="menu" aria-hidden="true">
+    <nav class="menu__links">
+      <a href="boutique.html"><span>01</span>Boutique</a>
+      <a href="a-propos.html"><span>02</span>L'atelier</a>
+      <a href="faq.html"><span>03</span>FAQ</a>
+      <a href="contact.html"><span>04</span>Contact</a>
+      <a href="https://harmonycandles.fr/cart"><span>05</span>Panier</a>
+    </nav>
+    <p class="menu__foot label">Transformez votre intérieur en cocon parfumé</p>
+  </div>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="top">
+      <div class="hero__blobs" aria-hidden="true"><i></i><i></i><i></i></div>
+      <canvas class="particles" data-particles="petals"></canvas>
+
+      <div class="hero__text">
+        <p class="label hero__kicker"><span class="dot"></span>Créations parfumées, faites main</p>
+        <h1 class="hero__title" data-words>Transformez votre intérieur en <em>cocon parfumé</em></h1>
+        <p class="hero__lead">Des créations pensées pour apporter douceur, chaleur et bien-être à votre quotidien.</p>
+        <div class="hero__ctas">
+          <a class="btn-pill" href="#collections" data-magnetic><span class="roll"><span class="roll__in" data-text="Découvrir nos créations">Découvrir nos créations</span></span></a>
+          <a class="btn-ghost" href="#atelier" data-magnetic><span class="roll"><span class="roll__in" data-text="Notre univers">Notre univers</span></span></a>
+        </div>
+      </div>
+
+      <div class="hero__visual">
+        <div class="hero__arch" data-depth="0.4" aria-hidden="true"></div>
+        <div class="hero__product" data-depth="0.9">
+          <span class="hero__shadow" aria-hidden="true"></span>
+          <img src="assets/img/cut/brules-parfums.png" alt="Brûle-parfum en céramique en forme d'ourson, avec des fondants pastel">
+        </div>
+        <div class="hero__round" data-depth="1.4">
+          <img src="assets/img/fondants.jpg" alt="Fondants parfumés en forme de papillons et de rosaces">
+        </div>
+        <div class="hero__badge" data-depth="1">
+          <svg viewBox="0 0 200 200" aria-hidden="true"><defs><path id="badge" d="M100,100 m-74,0 a74,74 0 1,1 148,0 a74,74 0 1,1 -148,0"/></defs><text><textPath href="#badge">fait main · harmony candles · fait main · harmony candles · </textPath></text></svg>
+          <span class="hero__badge-flame"><span class="flame"><i class="flame__outer"></i><i class="flame__inner"></i><i class="flame__core"></i></span></span>
+        </div>
+      </div>
+
+      <a class="hero__scroll" href="#bienvenue" aria-label="Défiler vers la suite">
+        <span class="label">Défiler</span>
+        <span class="hero__scroll-line"><i></i></span>
+      </a>
+    </section>
+
+    <!-- ============ MARQUEE ============ -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <div class="marquee__group">
+          <span>Fabrication artisanale</span><i>✿</i>
+          <span><em>Expédition rapide depuis la France</em></span><i>✿</i>
+          <span>Parfums de qualité</span><i>✿</i>
+          <span><em>Fait main, pièce par pièce</em></span><i>✿</i>
+        </div>
+        <div class="marquee__group">
+          <span>Fabrication artisanale</span><i>✿</i>
+          <span><em>Expédition rapide depuis la France</em></span><i>✿</i>
+          <span>Parfums de qualité</span><i>✿</i>
+          <span><em>Fait main, pièce par pièce</em></span><i>✿</i>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ WELCOME ============ -->
+    <section class="welcome" id="bienvenue">
+      <div class="welcome__text">
+        <p class="label">Bienvenue chez Harmony Candles</p>
+        <p class="welcome__statement" data-light>Harmony Candles est une marque dédiée à <em>l'art de parfumer</em> votre intérieur. Des créations parfumées pensées pour apporter douceur, chaleur et bien-être à votre quotidien.</p>
+        <a class="link-u" href="a-propos.html">À propos de nous <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="welcome__media">
+        <div class="welcome__img" data-speed="0.12"><img src="assets/img/hero.jpg" alt="Brûle-parfum en céramique et bougies chauffe-plat allumées sur un drapé crème" loading="lazy"></div>
+        <div class="welcome__img welcome__img--small" data-speed="-0.2"><img src="assets/img/about.jpg" alt="Bouquet de roses parfumées dans une boîte blanche" loading="lazy"></div>
+      </div>
+    </section>
+
+    <!-- ============ COLLECTIONS (horizontal) ============ -->
+    <section class="collections" id="collections">
+      <div class="collections__head">
+        <p class="label">Notre boutique</p>
+        <p class="label collections__counter"><b>01</b> / 08</p>
+      </div>
+      <div class="collections__track">
+        <div class="collections__intro">
+          <h2 class="h-display" data-words>Nos <em>collections</em></h2>
+          <p class="lead">Des fondants aux bouquets, chaque création est pensée pour faire de votre intérieur un cocon.</p>
+          <p class="label collections__hint">Faites défiler <span aria-hidden="true">→</span></p>
+        </div>
+
+        <a class="card" href="boutique.html?c=bouquets-de-fleurs" data-cursor="Découvrir">
+          <div class="card__arch" style="--tint:#f3d7d0"><img class="card__product" src="assets/img/cut/about.png" alt="Bouquet de roses parfumées dans une boîte blanche" loading="lazy"></div>
+          <div class="card__meta"><span class="label">01</span><span class="label">Bouquets</span></div>
+          <h3 class="card__title">Bouquets <em>de fleurs</em></h3>
+          <p class="card__desc">Des bouquets parfumés, composés à la main, qui ne fanent jamais.</p>
+        </a>
+
+        <a class="card" href="boutique.html?c=coffrets-idees-cadeaux" data-cursor="Découvrir">
+          <div class="card__arch" style="--tint:#f0e1cc"><img class="card__product" src="assets/img/cut/coffrets.png" alt="Coffret cadeau parfumé avec ruban, fondants et brûle-parfum" loading="lazy"></div>
+          <div class="card__meta"><span class="label">02</span><span class="label">Coffrets</span></div>
+          <h3 class="card__title">Coffrets <em>&amp; idées cadeaux</em></h3>
+          <p class="card__desc">Des coffrets soigneusement préparés, pour faire plaisir ou se faire plaisir.</p>
+        </a>
+
+        <a class="card" href="boutique.html?c=fondants-parfumes" data-cursor="Découvrir">
+          <div class="card__arch" style="--tint:#dfe7d4"><img class="card__product" src="assets/img/cut/fondants.png" alt="Fondants parfumés en forme de papillons et de rosaces" loading="lazy"></div>
+          <div class="card__meta"><span class="label">03</span><span class="label">Fondants</span></div>
+          <h3 class="card__title">Fondants <em>parfumés</em></h3>
+          <p class="card__desc">De petites merveilles visuelles, travaillées avec des détails délicats.</p>
+        </a>
+
+        <a class="card" href="boutique.html?c=brules-parfums-et-fondants" data-cursor="Découvrir">
+          <div class="card__arch" style="--tint:#f7ddc9"><img class="card__product" src="assets/img/cut/brules-parfums.png" alt="Brûle-parfum en forme d'ourson avec fondants colorés" loading="lazy"></div>
+          <div class="card__meta"><span class="label">04</span><span class="label">Brûle-parfums</span></div>
+          <h3 class="card__title">Brûle-<em>parfums</em></h3>
+          <p class="card__desc">Pour une soirée cocooning ou pour accueillir vos invités avec élégance.</p>
+        </a>
+
+        <a class="card" href="boutique.html?c=parfums-dinterieurs" data-cursor="Découvrir">
+          <div class="card__arch" style="--tint:#ebdfd8">
+            <div class="card__trio" role="img" aria-label="Trois flacons de parfum d'intérieur Harmony Candles">
+              <img class="trio trio--1" src="assets/img/cut/flacon-1.png" alt="" loading="lazy">
+              <img class="trio trio--2" src="assets/img/cut/flacon-2.png" alt="" loading="lazy">
+              <img class="trio trio--3" src="assets/img/cut/flacon-3.png" alt="" loading="lazy">
+            </div>
+          </div>
+          <div class="card__meta"><span class="label">05</span><span class="label">Parfums</span></div>
+          <h3 class="card__title">Parfums <em>d'intérieur</em></h3>
+          <p class="card__desc">Une diffusion rapide et intense pour sublimer chaque pièce.</p>
+        </a>
+
+        <a class="card" href="boutique.html?c=diffuseurs-voiture" data-cursor="Découvrir">
+          <div class="card__arch" style="--tint:#e7e2d2"><img class="card__product" src="assets/img/cut/diffuseurs-voiture.png" alt="Trois diffuseurs voiture en verre avec bouchon en bois" loading="lazy"></div>
+          <div class="card__meta"><span class="label">06</span><span class="label">Voiture</span></div>
+          <h3 class="card__title">Diffuseurs <em>voiture</em></h3>
+          <p class="card__desc">Une touche de fraîcheur parfumée sur chacun de vos trajets.</p>
+        </a>
+
+        <a class="card" href="boutique.html?c=nos-accessoires" data-cursor="Découvrir">
+          <div class="card__arch" style="--tint:#f2e4c8"><img class="card__product" src="assets/img/cut/accessoires.png" alt="Accessoires dorés pour bougie : mouchette et coupe-mèche" loading="lazy"></div>
+          <div class="card__meta"><span class="label">07</span><span class="label">Accessoires</span></div>
+          <h3 class="card__title">Nos <em>accessoires</em></h3>
+          <p class="card__desc">Des accessoires dorés qui prolongent la vie de vos bougies.</p>
+        </a>
+
+        <a class="card card--soft" href="boutique.html?c=nos-bons-plans" data-cursor="Découvrir">
+          <div class="card__arch" style="--tint:#ecc6bd"><div class="card__type" aria-hidden="true"><span>prix</span><em>doux</em></div></div>
+          <div class="card__meta"><span class="label">08</span><span class="label">Bons plans</span></div>
+          <h3 class="card__title">Nos <em>bons plans</em></h3>
+          <p class="card__desc">Fins de séries et légères imperfections : chaque pièce reste unique, à prix doux.</p>
+        </a>
+
+        <a class="collections__all" href="boutique.html" data-cursor="Entrer">
+          <span class="collections__all-ring"><svg viewBox="0 0 200 200" aria-hidden="true"><defs><path id="circ" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/></defs><text><textPath href="#circ">toute la boutique · toute la boutique · </textPath></text></svg></span>
+          <span class="collections__all-arrow" aria-hidden="true">→</span>
+          <span class="sr-only">Voir toute la boutique</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ============ ATELIER (dusk) ============ -->
+    <section class="reveal" id="atelier">
+      <div class="reveal__sticky">
+        <div class="reveal__glow" aria-hidden="true"></div>
+        <canvas class="particles" data-particles="flame"></canvas>
+
+        <div class="reveal__left">
+          <p class="label">L'atelier Harmony</p>
+          <h2 class="h-heading" data-words>Bien plus qu'une <em>simple bougie</em></h2>
+          <div class="meter">
+            <span class="label meter__num">01</span>
+            <span class="meter__line"><i></i></span>
+            <span class="label">03</span>
+          </div>
+        </div>
+
+        <div class="reveal__center">
+          <div class="candle" style="--t:0; --lit:0;">
+            <div class="candle__halo"></div>
+            <div class="candle__vessel">
+              <div class="candle__bottom"></div>
+              <div class="candle__body"><img class="candle__logo" src="assets/img/logo.png" alt=""></div>
+              <div class="candle__top"><div class="candle__wax"></div></div>
+            </div>
+            <div class="candle__wick"></div>
+            <div class="candle__flame"><span class="flame"><i class="flame__outer"></i><i class="flame__inner"></i><i class="flame__core"></i></span></div>
+            <div class="candle__shadow"></div>
+          </div>
+          <p class="reveal__hint label">Approchez-vous de la flamme</p>
+        </div>
+
+        <div class="reveal__right">
+          <div class="step is-active">
+            <p class="label">01 — La matière</p>
+            <p class="step__body">Chaque création est coulée à la main dans notre atelier, pièce par pièce, avec patience et précision.</p>
+          </div>
+          <div class="step">
+            <p class="label">02 — Le parfum</p>
+            <p class="step__body">Des fragrances sélectionnées avec attention pour diffuser une ambiance délicate et chaleureuse.</p>
+          </div>
+          <div class="step">
+            <p class="label">03 — La flamme</p>
+            <p class="step__body">Allumez, respirez. Votre intérieur devient un cocon parfumé, tout en douceur.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SPOTLIGHT ============ -->
+    <section class="spot" id="parfums">
+      <div class="spot__sticky">
+        <h2 class="spot__title" aria-label="Parfumez votre intérieur">
+          <span class="spot__w spot__w--l">Parfumez</span>
+          <span class="spot__w spot__w--r"><em>votre intérieur</em></span>
+        </h2>
+        <div class="spot__media">
+          <div class="spot__scene" role="img" aria-label="Trois flacons de parfum d'intérieur Harmony Candles flottant au-dessus d'un lin naturel">
+            <img class="spot__decor" src="assets/img/parfums-decor.jpg" alt="" loading="lazy">
+            <span class="ground ground--1"></span>
+            <span class="ground ground--2"></span>
+            <span class="ground ground--3"></span>
+            <a class="flacon flacon--1" href="boutique.html?c=parfums-dinterieurs" data-depth="1.3" data-cursor="Découvrir" tabindex="-1" aria-hidden="true"><img src="assets/img/cut/flacon-1.png" alt=""></a>
+            <a class="flacon flacon--2" href="boutique.html?c=parfums-dinterieurs" data-depth="0.8" data-cursor="Découvrir" tabindex="-1" aria-hidden="true"><img src="assets/img/cut/flacon-2.png" alt=""></a>
+            <a class="flacon flacon--3" href="boutique.html?c=parfums-dinterieurs" data-depth="1.7" data-cursor="Découvrir" tabindex="-1" aria-hidden="true"><img src="assets/img/cut/flacon-3.png" alt=""></a>
+            <canvas class="spot__mist" aria-hidden="true"></canvas>
+          </div>
+          <div class="spot__shade"></div>
+          <div class="spot__foot">
+            <p class="label">Parfums d'intérieur</p>
+            <p class="spot__text">Conçus pour diffuser une fragrance délicate et transformer l'atmosphère de votre maison. Quelques vaporisations suffisent.</p>
+            <a class="btn-pill btn-pill--light" href="boutique.html?c=parfums-dinterieurs" data-magnetic><span class="roll"><span class="roll__in" data-text="Découvrir les parfums">Découvrir les parfums</span></span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ MOMENTS ============ -->
+    <section class="moments" id="moments">
+      <div class="moments__head">
+        <p class="label">Pour chaque moment</p>
+        <h2 class="h-heading" data-words>Quel <em>moment</em> voulez-vous parfumer&nbsp;?</h2>
+      </div>
+      <ul class="moments__list">
+        <li><a class="moment" href="boutique.html?c=brules-parfums-et-fondants" data-i="0">
+          <span class="label moment__num">01</span>
+          <span class="moment__title">Une soirée <em>cocooning</em></span>
+          <span class="label moment__cat">Brûle-parfums &amp; fondants</span>
+          <span class="moment__arrow" aria-hidden="true">→</span>
+        </a></li>
+        <li><a class="moment" href="boutique.html?c=coffrets-idees-cadeaux" data-i="1">
+          <span class="label moment__num">02</span>
+          <span class="moment__title">Un cadeau <em>qui fait plaisir</em></span>
+          <span class="label moment__cat">Coffrets &amp; idées cadeaux</span>
+          <span class="moment__arrow" aria-hidden="true">→</span>
+        </a></li>
+        <li><a class="moment" href="boutique.html?c=parfums-dinterieurs" data-i="2">
+          <span class="label moment__num">03</span>
+          <span class="moment__title">Une maison <em>qui sent bon</em></span>
+          <span class="label moment__cat">Parfums d'intérieur</span>
+          <span class="moment__arrow" aria-hidden="true">→</span>
+        </a></li>
+        <li><a class="moment" href="boutique.html?c=diffuseurs-voiture" data-i="3">
+          <span class="label moment__num">04</span>
+          <span class="moment__title">Des trajets <em>parfumés</em></span>
+          <span class="label moment__cat">Diffuseurs voiture</span>
+          <span class="moment__arrow" aria-hidden="true">→</span>
+        </a></li>
+        <li><a class="moment" href="boutique.html?c=bouquets-de-fleurs" data-i="4">
+          <span class="label moment__num">05</span>
+          <span class="moment__title">Des fleurs <em>qui ne fanent pas</em></span>
+          <span class="label moment__cat">Bouquets de fleurs</span>
+          <span class="moment__arrow" aria-hidden="true">→</span>
+        </a></li>
+      </ul>
+      <div class="moments__float" aria-hidden="true">
+        <img src="assets/img/brules-parfums.jpg" alt="" loading="lazy">
+        <img src="assets/img/coffrets.jpg" alt="" loading="lazy">
+        <img src="assets/img/parfums-interieur.jpg" alt="" loading="lazy">
+        <img src="assets/img/diffuseurs-voiture.jpg" alt="" loading="lazy">
+        <img src="assets/img/about.jpg" alt="" loading="lazy">
+      </div>
+    </section>
+
+    <!-- ============ ENGAGEMENTS ============ -->
+    <section class="pledge">
+      <div class="pledge__head">
+        <p class="label">Notre engagement</p>
+        <h2 class="h-heading" data-words>Trois promesses, <em>une même douceur</em></h2>
+      </div>
+      <div class="pledge__grid">
+        <article class="pledge__card">
+          <span class="pledge__icon">
+            <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 6c3 5 7 8 7 13a7 7 0 0 1-14 0c0-5 4-8 7-13z"/><path d="M24 26v4"/><rect x="15" y="30" width="18" height="12" rx="3"/></svg>
+          </span>
+          <h3 class="pledge__title">Fabrication <em>artisanale</em></h3>
+          <p class="pledge__text">Des créations parfumées réalisées avec soin pour apporter douceur et harmonie à votre intérieur.</p>
+        </article>
+        <article class="pledge__card">
+          <span class="pledge__icon">
+            <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M8 16l16-8 16 8v16l-16 8-16-8z"/><path d="M8 16l16 8 16-8"/><path d="M24 24v16"/><path d="M16 12l16 8"/></svg>
+          </span>
+          <h3 class="pledge__title">Expédition <em>rapide</em></h3>
+          <p class="pledge__text">Vos commandes sont préparées et expédiées rapidement depuis notre atelier, en France.</p>
+        </article>
+        <article class="pledge__card">
+          <span class="pledge__icon">
+            <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M38 10C20 10 10 18 10 30c0 4 2 8 2 8s4-14 18-18"/><path d="M38 10c0 18-8 28-20 28"/></svg>
+          </span>
+          <h3 class="pledge__title">Parfums <em>de qualité</em></h3>
+          <p class="pledge__text">Des fragrances sélectionnées avec attention pour diffuser une ambiance délicate et chaleureuse.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ GIFTS ============ -->
+    <section class="gift" id="cadeaux">
+      <div class="gift__media">
+        <div class="gift__img gift__img--a" data-speed="-0.1"><img src="assets/img/coffrets.jpg" alt="Coffret cadeau Harmony Candles" loading="lazy"></div>
+        <div class="gift__img gift__img--b" data-speed="0.16"><img src="assets/img/accessoires.jpg" alt="Accessoires dorés et bougie fleur" loading="lazy"></div>
+        <div class="gift__img gift__img--c" data-speed="0.3"><img src="assets/img/about.jpg" alt="Bouquet de fleurs parfumé" loading="lazy"></div>
+      </div>
+      <div class="gift__text">
+        <p class="label">Coffrets &amp; idées cadeaux</p>
+        <h2 class="h-display" data-words>Offrir un <em>moment parfumé</em></h2>
+        <p class="lead" data-reveal>Plusieurs compositions de fondants parfumés, brûle-parfums et autres créations artisanales, réalisées à la main pour toutes les occasions.</p>
+        <div class="gift__ctas" data-reveal>
+          <a class="btn-pill" href="produit.html?p=cartes-cadeaux" data-magnetic><span class="roll"><span class="roll__in" data-text="Cartes cadeaux">Cartes cadeaux</span></span></a>
+          <a class="btn-ghost" href="boutique.html?c=coffrets-idees-cadeaux" data-magnetic><span class="roll"><span class="roll__in" data-text="Voir les coffrets">Voir les coffrets</span></span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer" id="contact">
+    <div class="news" data-reveal>
+      <div class="news__text">
+        <p class="label">Newsletter</p>
+        <h2 class="news__title">Restons <em>en douceur</em></h2>
+        <p class="lead">Abonnez-vous pour ne manquer aucune promotion, aucune nouveauté.</p>
+      </div>
+      <form class="news__form" action="https://harmonycandles.fr/contact#contact_form" method="post" accept-charset="UTF-8">
+        <input type="hidden" name="form_type" value="customer">
+        <input type="hidden" name="utf8" value="✓">
+        <input type="hidden" name="contact[tags]" value="newsletter">
+        <label class="sr-only" for="news-email">Adresse e-mail</label>
+        <input id="news-email" type="email" name="contact[email]" placeholder="Votre adresse e-mail" autocomplete="email" required>
+        <button type="submit" class="btn-pill" data-magnetic><span class="roll"><span class="roll__in" data-text="S'inscrire">S'inscrire</span></span></button>
+      </form>
+    </div>
+
+    <div class="footer__cols">
+      <div>
+        <p class="label">Boutique</p>
+        <a class="link-u" href="boutique.html?c=bouquets-de-fleurs">Bouquets de fleurs</a>
+        <a class="link-u" href="boutique.html?c=coffrets-idees-cadeaux">Coffrets &amp; idées cadeaux</a>
+        <a class="link-u" href="boutique.html?c=fondants-parfumes">Fondants parfumés</a>
+        <a class="link-u" href="boutique.html?c=brules-parfums-et-fondants">Brûle-parfums</a>
+        <a class="link-u" href="boutique.html?c=parfums-dinterieurs">Parfums d'intérieur</a>
+        <a class="link-u" href="boutique.html?c=diffuseurs-voiture">Diffuseurs voiture</a>
+        <a class="link-u" href="boutique.html?c=nos-accessoires">Accessoires</a>
+        <a class="link-u" href="boutique.html?c=nos-bons-plans">Bons plans</a>
+      </div>
+      <div>
+        <p class="label">Aide</p>
+        <a class="link-u" href="faq.html">FAQ</a>
+        <a class="link-u" href="https://harmonycandles.fr/apps/17TRACK">Suivi colis</a>
+        <a class="link-u" href="a-propos.html">À propos</a>
+        <a class="link-u" href="contact.html">Contact</a>
+        <a class="link-u" href="produit.html?p=cartes-cadeaux">Cartes cadeaux</a>
+      </div>
+      <div>
+        <p class="label">Informations</p>
+        <a class="link-u" href="https://harmonycandles.fr/policies/terms-of-sale">Conditions de vente</a>
+        <a class="link-u" href="https://harmonycandles.fr/policies/refund-policy">Remboursement</a>
+        <a class="link-u" href="https://harmonycandles.fr/policies/privacy-policy">Confidentialité</a>
+        <a class="link-u" href="https://harmonycandles.fr/policies/legal-notice">Mentions légales</a>
+      </div>
+    </div>
+
+    <div class="footer__mark" aria-hidden="true"><span>H</span><span>a</span><span>r</span><span>m</span><span>o</span><span>n</span><span>y</span></div>
+
+    <div class="footer__bottom">
+      <span class="label">© 2026 Harmony Candles — Créations artisanales</span>
+      <span class="legal">Apple Pay · Bancontact · Cartes Bancaires · EPS · Google Pay · Klarna · Mastercard · Visa</span>
+      <a class="link-u label" href="#top">Retour en haut ↑</a>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="assets/js/layout.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
