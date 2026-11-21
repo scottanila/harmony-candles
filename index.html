@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Inter:wght@200;300;400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/scenes.css">
   <script>
     if (!matchMedia('(prefers-reduced-motion: reduce)').matches) document.documentElement.classList.add('anim');
     setTimeout(function () { if (!window.gsap) document.documentElement.classList.remove('anim'); }, 4000);
@@ -58,6 +59,36 @@
       </div>
     </div>
 
+    <!-- TEDDY : composition qui flotte doucement -->
+    <section class="s-teddy" aria-labelledby="teddy-t">
+      <div class="s-teddy__text">
+        <p class="label scene-label"><i></i>Brûle-parfum</p>
+        <h2 class="h1" id="teddy-t" data-split style="margin:22px 0 24px">Brûle-parfum <em>Teddy</em></h2>
+        <p class="lead" data-reveal>Un ourson tout en blanc, en céramique laquée, qui évoque la douceur et l’envie d’être câliné. Déposez un fondant dans sa tête, glissez une bougie chauffe-plat : le parfum s’éveille.</p>
+        <p class="s-teddy__meta" data-reveal><span>16,90 €</span><span>Céramique laquée</span><span>38 ml</span></p>
+        <div class="split__links" data-reveal>
+          <a class="link link--lg" href="produit.html?p=brule-parfum-teddy" data-magnetic>Découvrir Teddy <span class="arr">→</span></a>
+          <a class="link link--lg" href="boutique.html?c=fondants-parfumes" data-magnetic>Les fondants <span class="arr">→</span></a>
+        </div>
+      </div>
+
+      <div class="teddy" data-teddy aria-hidden="true">
+        <span class="teddy__glow"></span>
+        <div class="t-item t-bear" data-depth="0.5"><div class="t-mouse"><div class="t-float">
+          <img src="assets/img/cut/teddy/bear.webp" alt=""><span class="t-shadow"></span>
+        </div></div></div>
+        <div class="t-item t-swirl" data-depth="1.3" data-speed="-60"><div class="t-mouse"><div class="t-float">
+          <img src="assets/img/cut/teddy/swirl.webp" alt="">
+        </div></div></div>
+        <div class="t-item t-fly1" data-depth="1.6" data-speed="-110"><div class="t-mouse"><div class="t-float">
+          <img src="assets/img/cut/teddy/butterfly.webp" alt="">
+        </div></div></div>
+        <div class="t-item t-fly2" data-depth="1" data-speed="-30"><div class="t-mouse"><div class="t-float">
+          <img src="assets/img/cut/teddy/butterfly2.webp" alt="">
+        </div></div></div>
+      </div>
+    </section>
+
     <!-- COLLECTIONS -->
     <section class="hs" aria-labelledby="col-title">
       <div class="hs__head">
@@ -80,6 +111,35 @@
       </div>
     </section>
 
+    <!-- FLACONS : éclaté au défilement -->
+    <section class="s-flacons" aria-labelledby="flacons-t">
+      <div class="s-flacons__head">
+        <p class="label">Parfums d’intérieur</p>
+        <h2 class="h1" id="flacons-t" data-split>Un flacon, <em>trois ambiances</em></h2>
+      </div>
+      <div class="bottles">
+        <div class="bottle" data-bottle style="--nx:19%;--ny:2.5%;--ar:.399">
+          <div class="prod" data-tilt><div class="prod__tilt"><img src="assets/img/cut/flacon-ref.png" alt="Flacon de parfum d’intérieur Harmony Candles, étiquette noire et rose"><span class="sheen"></span></div><span class="ground"></span></div>
+          <span class="mist" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></span>
+          <span class="bottle__name"><span class="label muted">Le salon</span><b>Pour recevoir</b></span>
+        </div>
+        <div class="bottle" data-bottle style="--nx:19%;--ny:2.5%;--ar:.399">
+          <div class="prod" data-tilt><div class="prod__tilt"><img src="assets/img/cut/flacon-ref.png" alt="Flacon de parfum d’intérieur Harmony Candles, étiquette noire et rose"><span class="sheen"></span></div><span class="ground"></span></div>
+          <span class="mist" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></span>
+          <span class="bottle__name"><span class="label muted">La chambre</span><b>Pour s’endormir</b></span>
+        </div>
+        <div class="bottle" data-bottle style="--nx:19%;--ny:2.5%;--ar:.399">
+          <div class="prod" data-tilt><div class="prod__tilt"><img src="assets/img/cut/flacon-ref.png" alt="Flacon de parfum d’intérieur Harmony Candles, étiquette noire et rose"><span class="sheen"></span></div><span class="ground"></span></div>
+          <span class="mist" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></span>
+          <span class="bottle__name"><span class="label muted">Le linge</span><b>Pour les tissus</b></span>
+        </div>
+      </div>
+      <div class="s-flacons__notes">
+        <p>Rose · Noix de Coco · Vanille · Musc · Monoï Pêche · Adoucissant · Rose Vanillée</p>
+        <a class="link" href="produit.html?p=parfums-dinterieurs" data-magnetic>Choisir mon parfum · 18,90 € <span class="arr">→</span></a>
+      </div>
+    </section>
+
     <!-- INCONTOURNABLES -->
     <section class="section">
       <div class="wrap wrap--wide">
@@ -92,6 +152,42 @@
         </div>
         <hr class="rule" data-draw style="margin-bottom:40px">
         <div class="grid" data-stagger data-products="brule-parfum-arche, tablettes-parfumees, parfums-dinterieurs, fondants-spirales, bouquet-de-fleurs-roses, brule-parfum-bum, fondants-papillons, coffret-avec-bruleur-ted"></div>
+      </div>
+    </section>
+
+    <!-- POT DE CŒURS : couleurs au choix -->
+    <section class="section section--mist">
+      <div class="wrap wrap--wide s-coeurs">
+        <div class="swfield" data-swfield>
+          <div class="swfield__wipe"></div>
+          <span class="swfield__count label">Fondants</span>
+          <div class="prod" data-tilt>
+            <div class="prod__tilt">
+              <img src="assets/img/products/cut/pot-de-coeurs-fondants.png" alt="Pot de cœurs fondants sur un rondin de bois, entre deux petits sapins dorés">
+              <span class="tint"></span>
+              <span class="tint tint--light"></span>
+              <span class="sheen"></span>
+            </div>
+            <span class="ground"></span>
+          </div>
+          <span class="swfield__name" aria-hidden="true"><span data-colname>Rose</span></span>
+        </div>
+        <div>
+          <p class="label">Pot de 10 cœurs fondants</p>
+          <h2 class="h1" data-split style="margin:18px 0 22px">Votre couleur, <em>votre parfum</em></h2>
+          <p class="lead" data-reveal>Cinq couleurs, neuf parfums. Choisissez une teinte : les cœurs changent de couleur sous vos yeux.</p>
+          <div class="opt" data-reveal>
+            <p class="label opt__label"><span>Couleur</span><span data-colsel>Rose</span></p>
+            <div class="swatches" data-swatches></div>
+          </div>
+          <div class="opt" data-reveal>
+            <p class="label opt__label"><span>Parfum</span><span data-parsel></span></p>
+            <div class="chips" data-parfums></div>
+          </div>
+          <div class="buy" data-reveal>
+            <a class="cta" data-coeurs-cta href="#">Ajouter au panier · 14,90 € <span>→</span></a>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -209,5 +305,6 @@
   <script src="assets/js/layout.js"></script>
   <script src="assets/js/pages.js"></script>
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/scenes.js"></script>
 </body>
 </html>

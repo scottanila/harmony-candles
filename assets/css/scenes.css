@@ -1,0 +1,116 @@
+/* =========================================================
+   HARMONY CANDLES — scènes produits animées de l'accueil
+   Produits détourés animés au défilement et au survol.
+   ========================================================= */
+
+/* ---------- briques communes ---------- */
+.prod { position: relative; perspective: 1200px; }
+.prod__tilt { position: relative; transform-style: preserve-3d; isolation: isolate; will-change: transform; }
+.prod__tilt > img { display: block; width: 100%; height: auto; user-select: none; -webkit-user-drag: none; }
+/* reflet qui suit la souris, limité à la silhouette du produit */
+.sheen {
+  position: absolute; inset: 0; pointer-events: none; mix-blend-mode: soft-light; opacity: .9;
+  background: radial-gradient(circle at var(--sx, 30%) var(--sy, 20%), rgba(255,255,255,.95), rgba(255,255,255,0) 42%);
+  -webkit-mask-position: center; mask-position: center; -webkit-mask-size: 100% 100%; mask-size: 100% 100%; -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat;
+}
+.ground { position: absolute; left: 12%; right: 12%; bottom: -3%; height: 9%; border-radius: 50%; background: radial-gradient(ellipse at center, rgba(60, 40, 20, .28), rgba(60, 40, 20, 0) 70%); z-index: -1; filter: blur(4px); will-change: transform, opacity; }
+
+.scene-label { display: flex; gap: 14px; align-items: center; }
+.scene-label i { width: 40px; height: 1px; background: currentColor; display: inline-block; }
+
+/* =========================================================
+   SCÈNE 1 — BRÛLE-PARFUM TEDDY (composition qui flotte)
+   ========================================================= */
+.s-teddy { position: relative; min-height: 100svh; display: grid; grid-template-columns: 1fr 1.15fr; gap: clamp(30px, 5vw, 80px); align-items: center; padding: 60px var(--gutter); max-width: 1480px; margin: 0 auto; }
+.s-teddy__meta { display: flex; gap: 22px; margin: 26px 0 0; font-size: 13px; color: var(--graphite); }
+.s-teddy__meta span:first-child { color: var(--ink); }
+.teddy { position: relative; aspect-ratio: 1 / 1; width: 100%; max-height: 82svh; justify-self: center; }
+.teddy__glow { position: absolute; left: 18%; top: 14%; width: 64%; height: 64%; border-radius: 50%; background: radial-gradient(circle, rgba(246, 210, 190, .55), rgba(246, 210, 190, 0) 68%); animation: breathe 7s ease-in-out infinite; }
+@keyframes breathe { 50% { transform: scale(1.08); opacity: .75; } }
+.t-item { position: absolute; will-change: transform; }
+.t-mouse { will-change: transform; }
+.t-float { position: relative; animation: floaty var(--dur, 6s) ease-in-out infinite; animation-delay: var(--delay, 0s); }
+.t-item img { display: block; width: 100%; height: auto; user-select: none; -webkit-user-drag: none; }
+@keyframes floaty {
+  0%, 100% { transform: translateY(0) rotate(var(--r0, 0deg)); }
+  50% { transform: translateY(var(--lift, -12px)) rotate(var(--r1, 0deg)); }
+}
+.t-bear { left: 29%; top: 16%; width: 42%; z-index: 2; }
+.t-bear .t-float { --dur: 6.5s; --lift: -10px; animation-name: floaty-bear; }
+@keyframes floaty-bear { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+.t-shadow { position: absolute; left: 12%; right: 12%; bottom: -5%; height: 9%; z-index: -1; border-radius: 50%; background: radial-gradient(ellipse, rgba(120, 80, 60, .25), rgba(120, 80, 60, 0) 70%); animation: shadow 6.5s ease-in-out infinite; }
+@keyframes shadow { 50% { transform: translateY(10px) scale(.86); opacity: .7; } }
+.t-swirl { right: 4%; bottom: 12%; width: 23%; z-index: 3; }
+.t-swirl .t-float { --dur: 7.5s; --delay: -2s; --lift: -14px; --r0: -4deg; --r1: 3deg; }
+.t-fly1 { left: 3%; bottom: 16%; width: 22%; z-index: 3; }
+.t-fly1 .t-float { --dur: 6s; --delay: -1s; --lift: -16px; --r0: 6deg; --r1: -3deg; }
+.t-fly2 { right: 8%; top: 8%; width: 16%; z-index: 1; filter: blur(.4px); opacity: .92; }
+.t-fly2 .t-float { --dur: 8s; --delay: -4s; --lift: -10px; --r0: -10deg; --r1: -4deg; }
+
+/* =========================================================
+   SCÈNE 2 — POT DE CŒURS (couleurs)
+   ========================================================= */
+.s-coeurs { display: grid; grid-template-columns: 1.15fr 1fr; gap: clamp(30px, 6vw, 100px); align-items: center; }
+.swfield {
+  position: relative; aspect-ratio: 1 / 1; border-radius: var(--radius); overflow: hidden;
+  background: var(--bg, #f6e3e6); transition: background-color 0s;
+  display: grid; place-items: center;
+}
+.swfield__wipe { position: absolute; inset: 0; z-index: 0; clip-path: circle(0% at var(--wx, 50%) var(--wy, 50%)); }
+.swfield .prod { width: 78%; z-index: 1; }
+.swfield__name { position: absolute; left: 24px; bottom: 20px; z-index: 2; font-family: var(--serif); font-weight: 300; font-size: clamp(40px, 6vw, 84px); line-height: .9; color: rgba(0,0,0,.08); overflow: hidden; }
+.swfield__name span { display: inline-block; }
+.swfield__count { position: absolute; right: 22px; top: 20px; z-index: 2; }
+
+/* recoloration des cœurs : couche de couleur masquée sur les seuls cœurs */
+.tint { position: absolute; inset: 0; pointer-events: none; background: var(--heart, transparent); mix-blend-mode: color; opacity: var(--tint-o, 0); transition: background-color .9s var(--ease), opacity .9s var(--ease);
+  -webkit-mask: url(../img/products/cut/pot-de-coeurs-fondants-mask.png) center / 100% 100% no-repeat; mask: url(../img/products/cut/pot-de-coeurs-fondants-mask.png) center / 100% 100% no-repeat; }
+.tint--light { mix-blend-mode: screen; background: #fff; opacity: var(--light-o, 0); }
+
+.swatches { display: flex; gap: 14px; margin-top: 14px; }
+.swatch { position: relative; width: 30px; height: 30px; border-radius: 50%; background: var(--c); box-shadow: inset 0 0 0 1px rgba(0,0,0,.08); transition: transform .5s var(--ease); }
+.swatch::after { content: ''; position: absolute; inset: -6px; border-radius: 50%; border: 1px solid var(--ink); transform: scale(.6); opacity: 0; transition: transform .5s var(--ease), opacity .3s; }
+.swatch:hover { transform: scale(1.12); }
+.swatch.is-active::after { transform: scale(1); opacity: 1; }
+.pop-heart { position: absolute; width: 16px; height: 16px; z-index: 3; pointer-events: none; }
+.pop-heart svg { width: 100%; height: 100%; fill: var(--hc); }
+
+/* =========================================================
+   SCÈNE 3 — PARFUMS D'INTÉRIEUR (éclaté, épinglé)
+   ========================================================= */
+.s-flacons { position: relative; height: 100svh; overflow: hidden; background: var(--mist); }
+.s-flacons__head { position: absolute; top: calc(var(--header-h) + 50px); left: 0; right: 0; text-align: center; z-index: 3; }
+.s-flacons__head .h1 { margin-top: 16px; }
+.bottles { --bh: min(44svh, 460px); position: absolute; left: 50%; top: 53%; width: 0; height: 0; z-index: 2; }
+.bottle { position: absolute; left: 0; top: 0; height: var(--bh); width: calc(var(--bh) * var(--ar)); transform: translate(-50%, -50%); }
+.bottle .prod__tilt > img { width: 100%; height: auto; filter: drop-shadow(0 26px 30px rgba(0,0,0,.18)); }
+.bottle .ground { bottom: -4%; left: 5%; right: 5%; }
+.bottle__name { position: absolute; left: 50%; top: 104%; transform: translateX(-50%); white-space: nowrap; text-align: center; opacity: 0; }
+.bottle__name b { display: block; font-family: var(--serif); font-weight: 300; font-size: 24px; }
+
+/* brume : particules qui jaillissent de la buse */
+.mist { position: absolute; left: var(--nx); top: var(--ny); width: 0; height: 0; z-index: 3; pointer-events: none; }
+.mist i { position: absolute; left: 0; top: 0; width: 26px; height: 26px; margin: -13px; border-radius: 50%; background: radial-gradient(circle, rgba(170,170,178,.5), rgba(190,190,198,0) 68%); opacity: 0; }
+.bottle.is-spraying .mist i { animation: spray 1.6s var(--ease) infinite; }
+.bottle.is-spraying .mist i:nth-child(2) { animation-delay: .12s; --dy: -30px; }
+.bottle.is-spraying .mist i:nth-child(3) { animation-delay: .24s; --dy: 18px; }
+.bottle.is-spraying .mist i:nth-child(4) { animation-delay: .36s; --dy: -8px; }
+.bottle.is-spraying .mist i:nth-child(5) { animation-delay: .5s; --dy: -44px; }
+.bottle.is-spraying .mist i:nth-child(6) { animation-delay: .62s; --dy: 30px; }
+@keyframes spray {
+  0% { transform: translate(0, 0) scale(.3); opacity: 0; }
+  15% { opacity: .95; }
+  100% { transform: translate(-150px, var(--dy, -14px)) scale(4.2); opacity: 0; }
+}
+.s-flacons__notes { position: absolute; left: 0; right: 0; bottom: 34px; text-align: center; z-index: 3; opacity: 0; }
+.s-flacons__notes p { font-family: var(--serif); font-weight: 300; font-size: clamp(18px, 1.8vw, 24px); margin: 10px 0 16px; }
+
+
+@media (max-width: 760px) {
+  .s-teddy { grid-template-columns: 1fr; padding-top: 30px; }
+  .teddy { order: -1; }
+  .s-coeurs { grid-template-columns: 1fr; }
+  .bottles { --bh: 30svh; }
+  .bottle__name { display: none; }
+  .s-flacons__notes p { padding: 0 var(--gutter); }
+}
