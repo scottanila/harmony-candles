@@ -123,12 +123,12 @@ a:hover > .roll .roll__in, button:hover > .roll .roll__in, .roll-host:hover .rol
   background: var(--ink); transition: transform .35s var(--ease), opacity .3s;
 }
 .cursor__ring {
-  position: absolute; width: 84px; height: 84px; margin: -42px 0 0 -42px; border-radius: 50%;
+  position: absolute; width: 44px; height: 44px; margin: -22px 0 0 -22px; border-radius: 50%;
   background: var(--ink); color: var(--paper);
   display: grid; place-items: center;
   transform: scale(0); transition: transform .5s var(--ease);
 }
-.cursor__label { font-size: 10px; font-weight: 300; letter-spacing: var(--track-wide); text-transform: uppercase; }
+.cursor__label { font-size: 6.5px; font-weight: 400; line-height: 1.15; letter-spacing: .04em; text-transform: uppercase; text-align: center; max-width: 38px; }
 .cursor.is-label .cursor__ring { transform: scale(1); }
 .cursor.is-label .cursor__dot { transform: scale(0); }
 .cursor.is-link .cursor__dot { transform: scale(3.2); background: transparent; box-shadow: inset 0 0 0 .4px var(--ink); }
